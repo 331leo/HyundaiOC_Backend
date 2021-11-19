@@ -22,6 +22,4 @@ async def get_user_data(token: str) -> User:
             },
         )
     )   
-    print(token)
-    print(data)
     return User.parse_obj(data)

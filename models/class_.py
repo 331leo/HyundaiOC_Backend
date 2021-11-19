@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
 from pydantic.types import conint
-from typing import List
+from typing import List, Optional
 
 from models.user import User
 
@@ -23,3 +23,9 @@ class Class(BaseModel):
     teacher: str = Field(description="담임선생님 이름", example="김선생")
     teacher_tel: str = Field(description="담임선생님 연락처", example="01012345678")
     classes: Classes = Field(description="수업 목록")
+
+class NowData(BaseModel):
+    date: str
+    period: int
+    weekday: str
+    subject: Optional[Subject]

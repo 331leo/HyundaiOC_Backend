@@ -10,3 +10,4 @@ class User(BaseModel):
     grade: int
     classnum: int
     number: int
+
